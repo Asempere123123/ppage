@@ -1,9 +1,9 @@
 use yew::prelude::*;
-use yew_router::prelude::*;
 use yew_bootstrap::util::*;
+use yew_router::prelude::*;
 
-mod pages;
 mod page_structure;
+mod pages;
 
 use page_structure::PageStructure;
 use pages::home::Home;
@@ -24,7 +24,6 @@ fn switch(routes: Route) -> Html {
 fn App() -> Html {
     html! {
     <>
-        {include_cdn()}
         <BrowserRouter>
             <Switch<Route> render={switch} />
         </BrowserRouter>
